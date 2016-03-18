@@ -5,9 +5,7 @@ import org.springframework.stereotype.Service;
 import pl.tomkuran.domain.Person;
 import pl.tomkuran.repository.PersonRepository;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 

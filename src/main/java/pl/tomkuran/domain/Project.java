@@ -1,5 +1,6 @@
 package pl.tomkuran.domain;
 
+import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
@@ -21,7 +22,9 @@ public class Project {
     private String projectName;
     private String projectDescription;
 
+    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime startDate;
+    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime endDate;
 
     public Integer getId() {
