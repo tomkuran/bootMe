@@ -15,7 +15,7 @@ public class ProjectResource {
     @Autowired
     ProjectService projectService;
 
-    /*POST /v1/persons/ */
+    /*POST /v1/projects/ */
     @RequestMapping(value = "/v1/projects/", method = RequestMethod.POST)
     Project save(@RequestBody Project project) {
         return projectService.create(project);
