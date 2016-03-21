@@ -12,7 +12,7 @@ public interface TaskTypeService {
 
     TaskType getById(Integer id);
 
-    List<TaskType> get();
+    List<TaskType> getAll();
 
     TaskType update(Integer id, TaskType taskType);
 

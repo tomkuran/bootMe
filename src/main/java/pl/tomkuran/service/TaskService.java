@@ -13,7 +13,7 @@ public interface TaskService {
 
     Task getById(Integer id);
 
-    List<Task> getPage(Integer page, Integer pageNum);
+    List<Task> getPage(Integer page, Integer pageSize);
 
     Task update(Integer id, Task task);
 
