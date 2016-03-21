@@ -1,10 +1,7 @@
 package pl.tomkuran.resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import pl.tomkuran.domain.Project;
 import pl.tomkuran.service.ProjectService;
 
@@ -13,6 +10,7 @@ import java.util.List;
 /**
  * Created by TKURAN on 3/18/2016.
  */
+@RestController
 public class ProjectResource {
     @Autowired
     ProjectService projectService;

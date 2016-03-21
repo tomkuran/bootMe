@@ -1,6 +1,7 @@
 package pl.tomkuran.bootstrap;
 
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -21,18 +22,18 @@ public class ProjectLoader implements ApplicationListener<ContextRefreshedEvent>
 
         Project lsp = new Project();
         lsp.setProjectName("LSP");
-        lsp.setProjectDescription("A gdyby tak wysztko pozmieniać? Tym razem na 100% się uda!");
-        lsp.setStartDate(new DateTime().minusDays(100));
-        lsp.setEndDate(new DateTime().plusDays(100));
+        lsp.setProjectDescription("Lorem ipsum dolor");
+        lsp.setStartDate(new LocalDate().minusDays(1));
+        lsp.setEndDate(new LocalDate().plusDays(1));
         projectService.create(lsp);
 
 
         Project nVision = new Project();
-        lsp.setProjectName("nVision");
-        lsp.setProjectDescription("Grube bańki na UX. Sure, sure..");
-        lsp.setStartDate(new DateTime().minusDays(90));
-        lsp.setEndDate(new DateTime().plusDays(110));
-        // projectService.create(nVision);
+        nVision.setProjectName("nVision");
+        nVision.setProjectDescription("Jeden, dwa, trzy... Próba mikrofonu..");
+        nVision.setStartDate(new LocalDate().minusDays(2));
+        nVision.setEndDate(new LocalDate().plusDays(2));
+        projectService.create(nVision);
 
     }
 }
