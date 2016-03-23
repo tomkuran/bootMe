@@ -2,6 +2,7 @@ package pl.tomkuran.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 import pl.tomkuran.domain.Task;
 import pl.tomkuran.repository.TaskRepository;
 
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by TKURAN on 3/21/2016.
  */
+@Service
 public class TaskServiceImpl implements TaskService {
 
     @Autowired

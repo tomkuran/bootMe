@@ -1,6 +1,7 @@
 package pl.tomkuran.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pl.tomkuran.domain.TaskType;
 import pl.tomkuran.repository.TaskTypeRepository;
 
@@ -11,6 +12,7 @@ import java.util.stream.StreamSupport;
 /**
  * Created by TKURAN on 3/21/2016.
  */
+@Service
 public class TaskTypeServiceImpl implements TaskTypeService {
     @Autowired
     private TaskTypeRepository taskTypeRepository;

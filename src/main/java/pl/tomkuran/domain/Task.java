@@ -1,7 +1,6 @@
 package pl.tomkuran.domain;
 
 import org.hibernate.annotations.Type;
-import org.joda.time.Interval;
 import org.joda.time.LocalDate;
 
 import javax.persistence.*;
@@ -16,7 +15,11 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @ManyToOne
     private TaskType taskType;
+
+    @ManyToOne
+    private Person person;
 
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
     private LocalDate taskStartDate;
@@ -34,7 +37,6 @@ public class Task {
         this.id = id;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
     public TaskType getTaskType() {
         return taskType;
     }
@@ -65,5 +67,13 @@ public class Task {
 
     public void setTaskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }
