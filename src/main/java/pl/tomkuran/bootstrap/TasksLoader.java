@@ -27,11 +27,11 @@ public class TasksLoader implements ApplicationListener<ContextRefreshedEvent> {
 
         TaskType intTest = new TaskType();
         intTest.setType("Testy integracyjne");
-        //  intTest = taskTypeService.create(intTest);
+        intTest = taskTypeService.create(intTest);
 
         TaskType uatTest = new TaskType();
         uatTest.setType("Testy akceptacyjne");
-        //  uatTest = taskTypeService.create(uatTest);
+        uatTest = taskTypeService.create(uatTest);
 
         Task taskForMe = new Task();
         taskForMe.setTaskDesc("Bardzo trudne zadanie dla mnie");

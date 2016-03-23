@@ -15,10 +15,10 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private TaskType taskType;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Person person;
 
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
