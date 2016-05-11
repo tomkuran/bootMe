@@ -3,7 +3,6 @@ package pl.tomkuran.resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.tomkuran.domain.Person;
-import pl.tomkuran.repository.PersonRepository;
 import pl.tomkuran.service.PersonService;
 
 import java.util.List;
@@ -20,7 +19,7 @@ public class PersonResource {
     PersonService personService;
 
     /*POST /v1/persons/ */
-    @RequestMapping(value = "/v1/persons/", method = RequestMethod.POST)
+    @RequestMapping(value = "/v1/persons", method = RequestMethod.POST)
     Person save(@RequestBody Person person) {
         return personService.create(person);
     }
@@ -40,7 +39,7 @@ public class PersonResource {
         return personService.getById(id);
     }
 
-    @RequestMapping(value = "/v1/persons/", method = RequestMethod.GET)
+    @RequestMapping(value = "/v1/persons", method = RequestMethod.GET)
     List<Person> get() {
         return personService.get();
     }

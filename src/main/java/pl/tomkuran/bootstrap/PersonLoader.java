@@ -24,18 +24,21 @@ public class PersonLoader implements ApplicationListener<ContextRefreshedEvent>{
         Person ola = new Person();
         ola.setFirstName("Ola");
         ola.setLastName("Kuran");
+        ola.setDescription("Ola - bardzo lubi koty, psy i konie.");
         personRepository.save(ola);
         log.info("Saved person: " + ola.getFirstName());
 
         Person tomek = new Person();
         tomek.setFirstName("Tomasz");
         tomek.setLastName("Kuran");
+        tomek.setDescription("Ehh szkoda pisać...");
         personRepository.save(tomek);
         log.info("Saved person: " + tomek.getFirstName());
 
         Person jas = new Person();
         jas.setFirstName("Jaś");
         jas.setLastName("Kuran");
+        jas.setDescription("Jaś Tomasz - zestresowany - zupełnie nie potrzebnie...");
         personRepository.save(jas);
         log.info("Saved person: " + jas.getFirstName());
     }
